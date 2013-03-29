@@ -1,0 +1,3 @@
+[submodule "ladspamm"]
+	path = ladspamm
+	url = http://github.com/fps/ladspamm
