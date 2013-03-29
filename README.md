@@ -24,6 +24,11 @@ Type
 make install
 </pre>
 
+# Documentation
+
+* Check the ladspamm documentation
+* Check the test_ladspamm0.py example
+
 # Author
 
 Florian Paul Schmidt (mista.tapas@gmx.net)
