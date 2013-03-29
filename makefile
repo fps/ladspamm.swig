@@ -3,9 +3,6 @@ PREFIX ?= /usr/local
 INSTALL ?= install
 SED ?= sed
 
-INCLUDE_PATH = $(PREFIX)/include/ladspamm-0
-PKGCONFIG_DIR ?= $(PREFIX)/lib/pkgconfig
-
 .PHONY: install all clean
 
 all: built_python
@@ -13,10 +10,12 @@ all: built_python
 install: all
 	python setup.py install
 
+LIBS = $(shell pkg-config ladspamm-0 --libs --cflags)
+
 
 built_python: ladspamm0.i
-	swig -I/usr/local/include -python -c++ -o ladspamm_wrap.cc ladspamm0.i
-	python setup.py build_ext -ldl -lboost_system -lboost_filesystem -I ./ladspamm
+	swig `pkg-config ladspamm-0 --cflags` -python -c++ -o ladspamm_wrap.cc ladspamm0.i
+	python setup.py build_ext -l"dl boost_system boost_filesystem"
 	touch built_python
 
 clean:
