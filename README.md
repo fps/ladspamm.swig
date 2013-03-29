@@ -6,7 +6,7 @@ Note that right now only python bindings will be generated. It should be easy to
 
 # License
 
-GPL 2.0 or later. See the LICENSE file for more information.
+LGPL 2.0 or later. See the LICENSE file for more information.
 
 # Building
 
