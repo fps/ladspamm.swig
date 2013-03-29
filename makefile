@@ -15,8 +15,8 @@ install: all
 
 
 built_python: ladspamm0.i
-	swig -Iladspamm -python -c++ -o ladspamm_wrap.cc ladspamm0.i
-	python setup.py build_ext -ldl -lboost_system -lboost_filesystem -I .
+	swig -I/usr/local/include -python -c++ -o ladspamm_wrap.cc ladspamm0.i
+	python setup.py build_ext -ldl -lboost_system -lboost_filesystem -I ./ladspamm
 	touch built_python
 
 clean:
