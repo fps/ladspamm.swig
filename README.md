@@ -1,4 +1,4 @@
-# ladspamm_swig
+# ladspamm.swig
 
 SWIG generated wrappers for ladspamm
 
